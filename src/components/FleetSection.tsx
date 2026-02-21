@@ -1,12 +1,16 @@
 import { Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { sendWhatsApp } from "@/lib/whatsapp";
+import fleetMinicar from "@/assets/fleet-minicar.jpg";
+import fleetSedan from "@/assets/fleet-sedan.jpg";
+import fleetKdh from "@/assets/fleet-kdh.jpg";
+import fleetKdhHighroof from "@/assets/fleet-kdh-highroof.jpg";
 
 const fleet = [
-  { type: "Mini Car", capacity: 3, pricePerKm: 120 },
-  { type: "Sedan", capacity: 4, pricePerKm: 150 },
-  { type: "KDH Van", capacity: 9, pricePerKm: 200 },
-  { type: "KDH High Roof", capacity: 14, pricePerKm: 230 },
+  { type: "Mini Car", capacity: 3, pricePerKm: 120, image: fleetMinicar },
+  { type: "Sedan", capacity: 4, pricePerKm: 150, image: fleetSedan },
+  { type: "KDH Van", capacity: 9, pricePerKm: 200, image: fleetKdh },
+  { type: "KDH High Roof", capacity: 14, pricePerKm: 230, image: fleetKdhHighroof },
 ];
 
 const FleetSection = () => {
@@ -27,16 +31,23 @@ const FleetSection = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
           {fleet.map((v) => (
-            <div key={v.type} className="glass-card p-6 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-              <div className="w-16 h-16 ocean-gradient rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🚗</span>
+            <div key={v.type} className="glass-card overflow-hidden group hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div className="h-48 overflow-hidden bg-muted/20">
+                <img
+                  src={v.image}
+                  alt={v.type}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
               </div>
-              <h3 className="text-lg font-bold text-foreground mb-2">{v.type}</h3>
-              <div className="flex items-center justify-center gap-1 text-muted-foreground mb-2">
-                <Users className="w-4 h-4" />
-                <span className="text-sm">{v.capacity} passengers</span>
+              <div className="p-5 text-center">
+                <h3 className="text-lg font-bold text-foreground mb-2">{v.type}</h3>
+                <div className="flex items-center justify-center gap-1 text-muted-foreground mb-2">
+                  <Users className="w-4 h-4" />
+                  <span className="text-sm">{v.capacity} passengers</span>
+                </div>
+                <p className="text-primary font-semibold">LKR {v.pricePerKm}/km</p>
               </div>
-              <p className="text-primary font-semibold">LKR {v.pricePerKm}/km</p>
             </div>
           ))}
         </div>
