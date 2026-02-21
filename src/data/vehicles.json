@@ -1,0 +1,6 @@
+[
+  { "type": "Mini Car", "pricePerKm": 120, "capacity": 3 },
+  { "type": "Sedan", "pricePerKm": 150, "capacity": 4 },
+  { "type": "KDH Van", "pricePerKm": 200, "capacity": 9 },
+  { "type": "KDH High Roof", "pricePerKm": 230, "capacity": 14 }
+]
