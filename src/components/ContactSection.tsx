@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { sendWhatsApp } from "@/lib/whatsapp";
+import { countries, iso2ToFlag } from "@/data/countries";
 
 const services = ["Airport Transfer", "Day Tour", "Long Tour", "Hotel Transfer", "Yala Safari", "Custom Request"];
 
@@ -11,13 +12,18 @@ const ContactSection = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [whatsapp, setWhatsapp] = useState("");
+  const [countryCode, setCountryCode] = useState("+94");
+  const [countrySearch, setCountrySearch] = useState("");
   const [service, setService] = useState("");
   const [message, setMessage] = useState("");
+
+  // Using a compact common-country list from src/data/countries
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!name || !message) return;
-    const msg = `Hello SL Go Travel,\n\nName: ${name}\nEmail: ${email}\nWhatsApp: ${whatsapp}\nService: ${service}\nMessage: ${message}`;
+    const fullWhatsApp = `${countryCode} ${whatsapp}`.trim();
+    const msg = `Hello SL Go Travel,\n\nName: ${name}\nEmail: ${email}\nWhatsApp: ${fullWhatsApp}\nService: ${service}\nMessage: ${message}`;
     sendWhatsApp(msg);
   };
 
@@ -87,7 +93,40 @@ const ContactSection = () => {
 
             <Input placeholder="Full Name" value={name} onChange={(e) => setName(e.target.value)} required />
             <Input type="email" placeholder="Email Address" value={email} onChange={(e) => setEmail(e.target.value)} />
-            <Input placeholder="WhatsApp Number" value={whatsapp} onChange={(e) => setWhatsapp(e.target.value)} />
+            <div className="flex gap-2">
+              <Select value={countryCode} onValueChange={(v) => { setCountryCode(v); setCountrySearch(""); }}>
+                <SelectTrigger className="w-20 md:w-24">
+                  <span className="text-sm text-center w-full">{countryCode}</span>
+                </SelectTrigger>
+                <SelectContent>
+                  <div className="p-2">
+                    <input
+                      value={countrySearch}
+                      onChange={(e) => setCountrySearch(e.target.value)}
+                      placeholder="Search country or code..."
+                      className="w-full rounded-md border border-input px-2 py-1 text-sm"
+                    />
+                  </div>
+                  {countries
+                    .filter((c) => {
+                      const q = countrySearch.trim().toLowerCase();
+                      if (!q) return true;
+                      return (
+                        c.name.toLowerCase().includes(q) ||
+                        c.dial.includes(q) ||
+                        c.iso2.toLowerCase().includes(q)
+                      );
+                    })
+                    .map((c) => (
+                      <SelectItem key={c.dial + c.iso2} value={c.dial}>
+                        {`${iso2ToFlag(c.iso2)} ${c.name} ${c.dial}`}
+                      </SelectItem>
+                    ))}
+                </SelectContent>
+              </Select>
+
+              <Input placeholder="WhatsApp Number" value={whatsapp} onChange={(e) => setWhatsapp(e.target.value)} className="flex-1" />
+            </div>
 
             <Select value={service} onValueChange={setService}>
               <SelectTrigger><SelectValue placeholder="Select Service" /></SelectTrigger>

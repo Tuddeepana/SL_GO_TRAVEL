@@ -31,10 +31,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex items-center justify-between px-4">
         <a href="#home" className="flex items-center gap-2">
-          <span className="text-2xl font-bold font-display">
-            <span className={scrolled ? "text-primary" : "text-primary-foreground"}>SL Go</span>{" "}
-            <span className="text-secondary">Travel</span>
-          </span>
+          <img src="/logo_s.png" alt="SL Go Travel" className="h-12 md:h-16 w-auto" />
         </a>
 
         {/* Desktop */}

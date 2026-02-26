@@ -20,9 +20,11 @@ const BookingCard = () => {
   const [vehicle, setVehicle] = useState("");
   const [tripPlan, setTripPlan] = useState("");
   const [customRequest, setCustomRequest] = useState("");
+  /* 
   const [uberPickup, setUberPickup] = useState("");
   const [uberDrop, setUberDrop] = useState("");
   const [uberVehicle, setUberVehicle] = useState("");
+  */
 
   const estimatedPrice = useMemo(() => {
     if (!pickup || !drop || !vehicle) return null;
@@ -34,6 +36,7 @@ const BookingCard = () => {
     return { distance: dist, total: dist * v.pricePerKm };
   }, [pickup, drop, vehicle]);
 
+  /*
   const uberPrice = useMemo(() => {
     if (!uberPickup || !uberDrop || !uberVehicle) return null;
     const p = locations.find((l) => l.name === uberPickup);
@@ -43,6 +46,7 @@ const BookingCard = () => {
     const dist = getDistance(p.lat, p.lng, d.lat, d.lng);
     return { distance: dist, total: dist * v.pricePerKm };
   }, [uberPickup, uberDrop, uberVehicle]);
+  */
 
   const handleBookRide = () => {
     if (!pickup || !drop || !date || !time || !vehicle) return;
@@ -60,6 +64,7 @@ const BookingCard = () => {
     sendWhatsApp(`Hello SL Go Travel,\nCustom Request:\n\n${customRequest}`);
   };
 
+  /*
   const handleUberBook = () => {
     if (!uberPickup || !uberDrop || !uberVehicle) return;
     const p = locations.find((l) => l.name === uberPickup);
@@ -67,17 +72,18 @@ const BookingCard = () => {
     const msg = `Hello SL Go Travel,\nI would like to book a ride now.\n\nPickup: ${uberPickup} (${p?.lat}, ${p?.lng})\nDrop: ${uberDrop} (${d?.lat}, ${d?.lng})\nVehicle: ${uberVehicle}\nEstimated Price: LKR ${uberPrice?.total?.toLocaleString() ?? "N/A"}`;
     sendWhatsApp(msg);
   };
+  */
 
   const hours = Array.from({ length: 12 }, (_, i) => String(i + 1).padStart(2, "0"));
 
   return (
     <div className="glass-card p-4 md:p-6 w-full max-w-md">
       <Tabs defaultValue="ride" className="w-full">
-        <TabsList className="grid grid-cols-4 w-full bg-muted/50 mb-4">
+        <TabsList className="grid grid-cols-3 w-full bg-muted/50 mb-4">
           <TabsTrigger value="ride" className="text-xs md:text-sm data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">Book Ride</TabsTrigger>
           <TabsTrigger value="trip" className="text-xs md:text-sm data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">Trip</TabsTrigger>
           <TabsTrigger value="request" className="text-xs md:text-sm data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">Request</TabsTrigger>
-          <TabsTrigger value="booknow" className="text-xs md:text-sm data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">Book Now</TabsTrigger>
+          {/* <TabsTrigger value="booknow" className="text-xs md:text-sm data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">Book Now</TabsTrigger> */}
         </TabsList>
 
         {/* BOOK RIDE */}
@@ -160,7 +166,7 @@ const BookingCard = () => {
               <SelectContent>
                 {vehicles.map((v) => (
                   <SelectItem key={v.type} value={v.type}>
-                    {v.type} — LKR {v.pricePerKm}/km
+                    {v.type}
                   </SelectItem>
                 ))}
               </SelectContent>
@@ -169,8 +175,7 @@ const BookingCard = () => {
 
           {estimatedPrice && (
             <div className="tropical-gradient rounded-lg p-3 text-center">
-              <p className="text-xs font-medium text-secondary-foreground">Estimated ({estimatedPrice.distance} km)</p>
-              <p className="text-xl font-bold text-secondary-foreground">LKR {estimatedPrice.total.toLocaleString()}</p>
+              <p className="text-xl font-bold text-secondary-foreground">Estimated Price: LKR {estimatedPrice.total.toLocaleString()}</p>
             </div>
           )}
 
@@ -207,7 +212,7 @@ const BookingCard = () => {
           </Button>
         </TabsContent>
 
-        {/* BOOK NOW (Uber Style) */}
+        {/* BOOK NOW (Uber Style)
         <TabsContent value="booknow" className="space-y-3">
           <div className="space-y-2">
             <label className="text-xs font-medium text-muted-foreground flex items-center gap-1">
@@ -246,7 +251,7 @@ const BookingCard = () => {
               <SelectContent>
                 {vehicles.map((v) => (
                   <SelectItem key={v.type} value={v.type}>
-                    {v.type} — LKR {v.pricePerKm}/km
+                    {v.type}
                   </SelectItem>
                 ))}
               </SelectContent>
@@ -255,8 +260,7 @@ const BookingCard = () => {
 
           {uberPrice && (
             <div className="tropical-gradient rounded-lg p-3 text-center">
-              <p className="text-xs font-medium text-secondary-foreground">Estimated ({uberPrice.distance} km)</p>
-              <p className="text-xl font-bold text-secondary-foreground">LKR {uberPrice.total.toLocaleString()}</p>
+              <p className="text-xl font-bold text-secondary-foreground">Estimated Price: LKR {uberPrice.total.toLocaleString()}</p>
             </div>
           )}
 
@@ -264,6 +268,7 @@ const BookingCard = () => {
             <Send className="w-4 h-4" /> Book Now via WhatsApp
           </Button>
         </TabsContent>
+        */}
       </Tabs>
     </div>
   );

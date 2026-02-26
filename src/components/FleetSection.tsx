@@ -46,7 +46,6 @@ const FleetSection = () => {
                   <Users className="w-4 h-4" />
                   <span className="text-sm">{v.capacity} passengers</span>
                 </div>
-                <p className="text-primary font-semibold">LKR {v.pricePerKm}/km</p>
               </div>
             </div>
           ))}
