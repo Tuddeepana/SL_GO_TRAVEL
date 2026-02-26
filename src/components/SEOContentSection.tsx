@@ -6,7 +6,7 @@ const SEOContentSection = () => {
           <h2 className="text-3xl font-bold mb-6 text-primary">Sri Lanka Taxi & Yala Safari Booking</h2>
           <div className="space-y-4 text-muted-foreground leading-relaxed">
             <p>
-              SL Go Travel provides professional Sri Lanka taxi services including airport transfers from Katunayake, 
+              Slanka Taxi provides professional Sri Lanka taxi services including airport transfers from Katunayake, 
               <strong>Yala taxi service</strong>, <strong>Tissamaharama taxi</strong>, <strong>Ella taxi</strong> and private driver hire. 
               We specialize in safe and affordable transport for tourists visiting Yala National Park, Ella mountains and southern Sri Lanka.
             </p>

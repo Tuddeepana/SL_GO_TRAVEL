@@ -7,9 +7,9 @@ import { useEffect } from "react";
 
 const YalaTaxi = () => {
   useEffect(() => {
-    document.title = "Yala Taxi Service | Yala Safari Transport | SL Go Travel";
+    document.title = "Yala Taxi Service | Yala Safari Transport | Slanka Taxi";
     const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) metaDesc.setAttribute("content", "Safe and affordable taxi service in Yala National Park area. Book your Yala taxi and safari transport with SL Go Travel.");
+    if (metaDesc) metaDesc.setAttribute("content", "Safe and affordable taxi service in Yala National Park area. Book your Yala taxi and safari transport with Slanka Taxi.");
   }, []);
 
   return (
