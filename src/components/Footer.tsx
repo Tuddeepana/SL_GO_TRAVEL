@@ -64,8 +64,8 @@ const Footer = () => {
 
         <div className="border-t border-primary-foreground/20 mt-10 pt-6 text-center">
           <p className="text-sm text-primary-foreground/60 flex items-center justify-center gap-2">
-            <span>© {new Date().getFullYear()}</span>
-            <img src="/logo_s.png" alt="SL Go Travel" className="inline h-6 w-auto" />
+            <span>© {new Date().getFullYear()} SlankaTaxi </span>
+            {/*<img src="/logo_s.png" alt="SL Go Travel" className="inline h-6 w-auto" />*/}
             <span>All rights reserved.</span>
           </p>
         </div>
