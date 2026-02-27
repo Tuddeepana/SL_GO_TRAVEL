@@ -96,6 +96,15 @@
   html {
     scroll-behavior: smooth;
   }
+
+  /* Performance optimization for animations */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
 }
 
 @layer components {
@@ -130,6 +139,52 @@
 }
 
 @layer utilities {
+  /* Scroll reveal animations - triggered by Intersection Observer */
+  .scroll-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .scroll-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .scroll-reveal-left {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .scroll-reveal-left.revealed {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .scroll-reveal-right {
+    opacity: 0;
+    transform: translateX(40px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .scroll-reveal-right.revealed {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .scroll-reveal-scale {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .scroll-reveal-scale.revealed {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  /* Static animations for hero section */
   .animate-fade-up {
     animation: fadeUp 0.6s ease-out forwards;
     opacity: 0;
@@ -150,11 +205,28 @@
     opacity: 0;
   }
 
-  .delay-100 { animation-delay: 0.1s; }
-  .delay-200 { animation-delay: 0.2s; }
-  .delay-300 { animation-delay: 0.3s; }
-  .delay-400 { animation-delay: 0.4s; }
-  .delay-500 { animation-delay: 0.5s; }
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  /* Animation delays */
+  .delay-100 { animation-delay: 0.1s; transition-delay: 0.1s; }
+  .delay-200 { animation-delay: 0.2s; transition-delay: 0.2s; }
+  .delay-300 { animation-delay: 0.3s; transition-delay: 0.3s; }
+  .delay-400 { animation-delay: 0.4s; transition-delay: 0.4s; }
+  .delay-500 { animation-delay: 0.5s; transition-delay: 0.5s; }
+  .delay-600 { animation-delay: 0.6s; transition-delay: 0.6s; }
+  .delay-700 { animation-delay: 0.7s; transition-delay: 0.7s; }
+  .delay-800 { animation-delay: 0.8s; transition-delay: 0.8s; }
+
+  /* Smooth transitions for hover effects */
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .transition-smooth-slow {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
 
 @keyframes fadeUp {

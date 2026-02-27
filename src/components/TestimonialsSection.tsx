@@ -1,4 +1,5 @@
 import { Star } from "lucide-react";
+import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
 const testimonials = [
   {
@@ -22,19 +23,29 @@ const testimonials = [
 ];
 
 const TestimonialsSection = () => {
+  const { ref: titleRef, isVisible: titleVisible } = useScrollReveal();
+  const { ref: cardsRef, isVisible: cardsVisible } = useScrollReveal({ threshold: 0.1 });
+
   return (
     <section className="section-padding bg-muted/30">
       <div className="container mx-auto">
-        <div className="text-center mb-12">
+        <div
+          ref={titleRef}
+          className={`text-center mb-12 scroll-reveal ${titleVisible ? 'revealed' : ''}`}
+        >
           <h2 className="section-title">
             What Our <span className="text-secondary">Guests Say</span>
           </h2>
           <div className="w-20 h-1 ocean-gradient rounded-full mx-auto mb-6" />
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
-          {testimonials.map((t) => (
-            <div key={t.name} className="glass-card p-6 hover:shadow-xl transition-shadow">
+        <div ref={cardsRef} className="grid md:grid-cols-3 gap-6">
+          {testimonials.map((t, index) => (
+            <div
+              key={t.name}
+              className={`glass-card p-6 hover:shadow-xl transition-smooth scroll-reveal-scale ${cardsVisible ? 'revealed' : ''}`}
+              style={{ transitionDelay: `${index * 0.15}s` }}
+            >
               <div className="flex gap-1 mb-4">
                 {Array.from({ length: t.rating }).map((_, i) => (
                   <Star key={i} className="w-4 h-4 fill-secondary text-secondary" />

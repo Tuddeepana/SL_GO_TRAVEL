@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ChevronRight } from "lucide-react";
+import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import serviceAirport from "@/assets/service-airport.webp";
 import serviceDaytour from "@/assets/service-daytour.webp";
 import serviceLongtour from "@/assets/service-longtour.webp";
@@ -30,11 +31,16 @@ const services = [
 
 const ServicesSection = () => {
   const [expanded, setExpanded] = useState<number | null>(null);
+  const { ref: titleRef, isVisible: titleVisible } = useScrollReveal();
+  const { ref: cardsRef, isVisible: cardsVisible } = useScrollReveal({ threshold: 0.1 });
 
   return (
     <section id="services" className="section-padding bg-muted/30">
       <div className="container mx-auto">
-        <div className="text-center mb-12">
+        <div
+          ref={titleRef}
+          className={`text-center mb-12 scroll-reveal ${titleVisible ? 'revealed' : ''}`}
+        >
           <h2 className="section-title">
             Our <span className="text-primary">Services</span>
           </h2>
@@ -42,11 +48,12 @@ const ServicesSection = () => {
           <p className="section-subtitle">Professional transport & tourism services tailored for international travelers</p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div ref={cardsRef} className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, i) => (
             <div
               key={service.title}
-              className="glass-card overflow-hidden group hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              className={`glass-card overflow-hidden group hover:shadow-xl transition-smooth hover:-translate-y-1 scroll-reveal-scale ${cardsVisible ? 'revealed' : ''}`}
+              style={{ transitionDelay: `${i * 0.1}s` }}
             >
               <div className="h-48 overflow-hidden">
                 <img
