@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://slgotravel.com/</loc>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://slgotravel.com/logo.png</image:loc>
+      <image:title>Slanka Taxi - Sri Lanka Tourist Transport</image:title>
+    </image:image>
+  </url>
+
+  <!-- Airport Transfer Page -->
+  <url>
+    <loc>https://slgotravel.com/airport-transfer-sri-lanka</loc>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Yala Taxi Page -->
+  <url>
+    <loc>https://slgotravel.com/yala-taxi</loc>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Colombo Taxi Page -->
+  <url>
+    <loc>https://slgotravel.com/colombo-taxi</loc>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Ella Taxi Page -->
+  <url>
+    <loc>https://slgotravel.com/ella-taxi</loc>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Kandy Taxi Page -->
+  <url>
+    <loc>https://slgotravel.com/kandy-taxi</loc>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Galle Taxi Page -->
+  <url>
+    <loc>https://slgotravel.com/galle-taxi</loc>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Tissamaharama Taxi Page -->
+  <url>
+    <loc>https://slgotravel.com/tissamaharama-taxi</loc>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Yala Safari Page -->
+  <url>
+    <loc>https://slgotravel.com/yala-safari</loc>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Sigiriya Taxi Page -->
+  <url>
+    <loc>https://slgotravel.com/sigiriya-taxi</loc>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Nuwara Eliya Taxi Page -->
+  <url>
+    <loc>https://slgotravel.com/nuwara-eliya-taxi</loc>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Mirissa Taxi Page -->
+  <url>
+    <loc>https://slgotravel.com/mirissa-taxi</loc>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Negombo Taxi Page -->
+  <url>
+    <loc>https://slgotravel.com/negombo-taxi</loc>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>
+

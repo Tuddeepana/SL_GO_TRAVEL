@@ -1,0 +1,27 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="512" height="512" fill="#0B7AB5" rx="76.8"/>
+  
+  <!-- Taxi Icon -->
+  <g transform="translate(102.4, 128)">
+    <!-- Car body -->
+    <rect x="51.2" y="179.2" width="409.6" height="153.6" rx="30.72" fill="#FFC107"/>
+    <rect x="0" y="256" width="512" height="128" rx="25.6" fill="#FFC107"/>
+    
+    <!-- Windows -->
+    <rect x="102.4" y="204.8" width="128" height="92.16" rx="15.36" fill="#0B7AB5" opacity="0.3"/>
+    <rect x="281.6" y="204.8" width="128" height="92.16" rx="15.36" fill="#0B7AB5" opacity="0.3"/>
+    
+    <!-- Wheels -->
+    <circle cx="117.76" cy="384" r="56.32" fill="#2C3E50"/>
+    <circle cx="117.76" cy="384" r="33.28" fill="#34495E"/>
+    <circle cx="394.24" cy="384" r="56.32" fill="#2C3E50"/>
+    <circle cx="394.24" cy="384" r="33.28" fill="#34495E"/>
+    
+    <!-- Taxi sign -->
+    <rect x="194.56" y="138.24" width="122.88" height="40.96" rx="10.24" fill="#FF5722"/>
+  </g>
+  
+  <!-- Text "S" for Slanka -->
+  <text x="256" y="435.2" font-family="Arial, sans-serif" font-size="76.8" font-weight="bold" fill="white" text-anchor="middle">S</text>
+</svg>

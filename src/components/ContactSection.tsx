@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { sendWhatsApp } from "@/lib/whatsapp";
 import { countries, iso2ToFlag } from "@/data/countries";
+import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
 const services = ["Airport Transfer", "Day Tour", "Long Tour", "Hotel Transfer", "Yala Safari", "Custom Request"];
 
@@ -16,6 +17,9 @@ const ContactSection = () => {
   const [countrySearch, setCountrySearch] = useState("");
   const [service, setService] = useState("");
   const [message, setMessage] = useState("");
+
+  const { ref: titleRef, isVisible: titleVisible } = useScrollReveal();
+  const { ref: contentRef, isVisible: contentVisible } = useScrollReveal({ threshold: 0.1 });
 
   // Using a compact common-country list from src/data/countries
 
@@ -30,16 +34,19 @@ const ContactSection = () => {
   return (
     <section id="contact" className="section-padding bg-background">
       <div className="container mx-auto">
-        <div className="text-center mb-12">
+        <div
+          ref={titleRef}
+          className={`text-center mb-12 scroll-reveal ${titleVisible ? 'revealed' : ''}`}
+        >
           <h2 className="section-title">
             Contact <span className="text-primary">Us</span>
           </h2>
           <div className="w-20 h-1 tropical-gradient rounded-full mx-auto mb-6" />
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
+        <div ref={contentRef} className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
           {/* Contact Info + Map */}
-          <div className="space-y-6">
+          <div className={`space-y-6 scroll-reveal-left ${contentVisible ? 'revealed' : ''}`}>
             <div className="space-y-4">
               <div className="flex items-start gap-3">
                 <div className="w-10 h-10 ocean-gradient rounded-full flex items-center justify-center flex-shrink-0">
@@ -88,7 +95,7 @@ const ContactSection = () => {
           </div>
 
           {/* Contact Form */}
-          <form onSubmit={handleSubmit} className="glass-card p-6 md:p-8 space-y-4">
+          <form onSubmit={handleSubmit} className={`glass-card p-6 md:p-8 space-y-4 scroll-reveal-right ${contentVisible ? 'revealed' : ''} delay-200`}>
             <h3 className="text-xl font-bold text-foreground font-display mb-2">Send Us a Message</h3>
 
             <Input placeholder="Full Name" value={name} onChange={(e) => setName(e.target.value)} required />

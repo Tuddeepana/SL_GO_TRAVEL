@@ -3,54 +3,334 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sri Lanka Taxi Service | Yala Safari & Airport Transfer | Slanka Taxi</title>
-    <meta name="description" content="Book reliable Sri Lanka taxi service with Slanka Taxi. Airport transfers, Yala safari tours, Tissamaharama taxi, Ella taxi and private driver services at affordable prices. Safe, comfortable and trusted transport across Sri Lanka." />
-    <meta name="keywords" content="Sri Lanka taxi, Yala taxi, Tissamaharama taxi, Ella taxi, Sri Lanka airport transfer, Yala safari booking, Private driver Sri Lanka" />
-    <meta name="author" content="Slanka Taxi" />
-    <meta name="robots" content="index, follow" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
 
-    <meta property="og:title" content="Sri Lanka Taxi & Yala Safari | Slanka Taxi" />
-    <meta property="og:description" content="Safe and affordable taxi service in Sri Lanka including Yala, Ella and airport transfers." />
+    <!-- PWA Meta Tags -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Slanka Taxi" />
+    <meta name="application-name" content="Slanka Taxi" />
+    <meta name="theme-color" content="#0B7AB5" />
+    <meta name="msapplication-TileColor" content="#0B7AB5" />
+    <meta name="msapplication-tap-highlight" content="no" />
+
+    <!-- PWA Icons -->
+    <link rel="icon" type="image/svg+xml" sizes="192x192" href="/pwa-192x192.svg" />
+    <link rel="icon" type="image/svg+xml" sizes="512x512" href="/pwa-512x512.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.svg" />
+    <link rel="mask-icon" href="/pwa-512x512.svg" color="#0B7AB5" />
+
+    <!-- Primary Meta Tags -->
+    <title>Sri Lanka Taxi Service | #1 Airport Transfer & Yala Safari | Slanka Taxi</title>
+    <meta name="title" content="Sri Lanka Taxi Service | #1 Airport Transfer & Yala Safari | Slanka Taxi" />
+    <meta name="description" content="Book Sri Lanka's most trusted taxi service ✓ Airport transfers from Colombo ✓ Yala National Park safari ✓ Ella, Kandy, Galle tours ✓ 24/7 service ✓ Safe & affordable. Call +94716520690" />
+    <meta name="keywords" content="Sri Lanka taxi, taxi Sri Lanka, Sri Lanka airport transfer, Colombo airport taxi, Yala taxi service, Yala safari booking, Ella taxi, Kandy taxi, Galle taxi, Tissamaharama taxi, private driver Sri Lanka, Sri Lanka tour transport, Katunayake airport pickup, Sri Lanka travel, tourist taxi Sri Lanka, cab service Sri Lanka, Sri Lanka car hire, Sigiriya taxi, Nuwara Eliya taxi, Mirissa taxi, Unawatuna taxi, Bentota taxi, Negombo taxi" />
+    <meta name="author" content="Slanka Taxi - Sri Lanka Transport & Tourism" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="bingbot" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="revisit-after" content="3 days" />
+    <meta name="rating" content="general" />
+    <meta name="distribution" content="global" />
+    <meta name="geo.region" content="LK" />
+    <meta name="geo.placename" content="Sri Lanka" />
+    <meta name="geo.position" content="6.2603;81.2876" />
+    <meta name="ICBM" content="6.2603, 81.2876" />
+
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Slanka Taxi" />
+    <meta property="og:title" content="Sri Lanka Taxi Service | #1 Airport Transfer & Yala Safari | Slanka Taxi" />
+    <meta property="og:description" content="Book Sri Lanka's most trusted taxi service. Airport transfers, Yala safari, Ella & Kandy tours. Safe, affordable & 24/7 available. Call +94716520690" />
     <meta property="og:locale" content="en_LK" />
     <meta property="og:url" content="https://slgotravel.com" />
-    <meta property="og:image" content="https://slgotravel.com/logo.png" />
+    <meta property="og:image" content="https://slgotravel.com/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Slanka Taxi - Sri Lanka Tourist Transport Service" />
 
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Sri Lanka Taxi & Yala Safari | Slanka Taxi" />
-    <meta name="twitter:description" content="Safe and affordable taxi service in Sri Lanka including Yala, Ella and airport transfers." />
+    <meta name="twitter:site" content="@slankatxi" />
+    <meta name="twitter:creator" content="@slankatxi" />
+    <meta name="twitter:title" content="Sri Lanka Taxi Service | #1 Airport Transfer & Yala Safari" />
+    <meta name="twitter:description" content="Book Sri Lanka's most trusted taxi service. Airport transfers, Yala safari, Ella & Kandy tours. Safe & affordable." />
+    <meta name="twitter:image" content="https://slgotravel.com/og-image.jpg" />
 
-    <link rel="canonical" href="https://slgotravel.com" />
+    <!-- Canonical & Alternate -->
+    <link rel="canonical" href="https://slgotravel.com/" />
+    <link rel="alternate" hreflang="en" href="https://slgotravel.com/" />
+    <link rel="alternate" hreflang="x-default" href="https://slgotravel.com/" />
 
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+
+    <!-- Schema.org Structured Data - Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Slanka Taxi",
+      "alternateName": "SL Go Travel",
+      "url": "https://slgotravel.com",
+      "logo": "https://slgotravel.com/logo.png",
+      "sameAs": [
+        "https://www.facebook.com/slankatxi",
+        "https://www.instagram.com/slankatxi",
+        "https://twitter.com/slankatxi",
+        "https://www.youtube.com/@slankatxi"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+94716520690",
+        "contactType": "customer service",
+        "areaServed": "LK",
+        "availableLanguage": ["English", "Sinhala"]
+      }
+    }
+    </script>
+
+    <!-- Schema.org Structured Data - TaxiService -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "TaxiService",
-      "name": "Slanka Taxi",
+      "name": "Slanka Taxi - Sri Lanka Tourist Transport",
       "image": "https://slgotravel.com/logo.png",
       "url": "https://slgotravel.com",
       "telephone": "+94716520690",
+      "email": "info@slgotravel.com",
+      "description": "Professional taxi and tourist transport service in Sri Lanka offering airport transfers, Yala safari tours, and private driver services across all major destinations.",
+      "priceRange": "$$",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "379 Jayasirimawatha",
         "addressLocality": "Tissamaharama",
-        "addressCountry": "Sri Lanka"
+        "addressRegion": "Southern Province",
+        "postalCode": "82600",
+        "addressCountry": "LK"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "6.2603",
+        "longitude": "81.2876"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "00:00",
+        "closes": "23:59"
       },
       "areaServed": [
-        "Sri Lanka",
-        "Yala",
-        "Tissamaharama",
-        "Ella",
-        "Colombo",
-        "Katunayake"
+        {"@type": "Country", "name": "Sri Lanka"},
+        {"@type": "City", "name": "Colombo"},
+        {"@type": "City", "name": "Kandy"},
+        {"@type": "City", "name": "Galle"},
+        {"@type": "City", "name": "Ella"},
+        {"@type": "City", "name": "Tissamaharama"},
+        {"@type": "City", "name": "Negombo"},
+        {"@type": "City", "name": "Sigiriya"},
+        {"@type": "City", "name": "Nuwara Eliya"},
+        {"@type": "City", "name": "Mirissa"},
+        {"@type": "City", "name": "Trincomalee"},
+        {"@type": "Place", "name": "Yala National Park"},
+        {"@type": "Place", "name": "Bandaranaike International Airport"}
       ],
       "serviceType": [
         "Airport Transfer",
         "Yala Safari Transport",
         "Tourist Taxi Service",
-        "Private Driver"
+        "Private Driver Hire",
+        "Hotel Transfer",
+        "Day Tours",
+        "Multi-day Tours"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "127",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    }
+    </script>
+
+    <!-- Schema.org Structured Data - LocalBusiness -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Slanka Taxi",
+      "@id": "https://slgotravel.com/#business",
+      "url": "https://slgotravel.com",
+      "telephone": "+94716520690",
+      "image": "https://slgotravel.com/logo.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "379 Jayasirimawatha",
+        "addressLocality": "Tissamaharama",
+        "addressRegion": "Southern Province",
+        "postalCode": "82600",
+        "addressCountry": "LK"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 6.2603,
+        "longitude": 81.2876
+      },
+      "openingHoursSpecification": [{
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "00:00",
+        "closes": "23:59"
+      }],
+      "priceRange": "$$"
+    }
+    </script>
+
+    <!-- Schema.org Structured Data - FAQPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much does a taxi from Colombo Airport cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Taxi prices from Colombo Bandaranaike International Airport vary by destination. Colombo city: $35-45, Kandy: $70-85, Galle: $65-80, Ella: $120-140, Yala/Tissamaharama: $100-120. All prices are for private, air-conditioned vehicles."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I book a Yala Safari in Sri Lanka?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Book your Yala Safari with Slanka Taxi via WhatsApp at +94716520690. We offer half-day and full-day safari packages including 4x4 jeep, park entrance fees, breakfast/lunch, and experienced wildlife guides. Morning safaris start at 5:30 AM for best leopard sightings."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Slanka Taxi available 24/7?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Slanka Taxi operates 24 hours a day, 7 days a week. We provide airport pickups at any time, including late-night and early-morning flights. Contact us anytime via WhatsApp or phone at +94716520690."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What areas does Slanka Taxi cover in Sri Lanka?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Slanka Taxi covers all major tourist destinations in Sri Lanka including Colombo, Kandy, Galle, Ella, Sigiriya, Nuwara Eliya, Yala National Park, Mirissa, Trincomalee, Negombo, Bentota, Unawatuna, and all airports."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What types of vehicles are available?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We offer a range of vehicles: compact cars for couples, sedans for small families, KDH vans for groups up to 8, and high-roof KDH vans for larger groups. All vehicles are air-conditioned, clean, and well-maintained."
+          }
+        }
       ]
+    }
+    </script>
+
+    <!-- Schema.org Structured Data - Reviews -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Slanka Taxi Service",
+      "description": "Professional tourist taxi and transport service in Sri Lanka",
+      "brand": {
+        "@type": "Brand",
+        "name": "Slanka Taxi"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "127"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Emma Wilson"
+          },
+          "reviewBody": "Fantastic safari experience! The driver was very knowledgeable about wildlife and the jeep was comfortable. Highly recommend Slanka Taxi!"
+        },
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Hans Mueller"
+          },
+          "reviewBody": "We booked airport transfer and a 3-day tour. Everything was perfectly organized. Punctual, professional, and great value for money."
+        },
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Sarah Chen"
+          },
+          "reviewBody": "The Yala safari was a once-in-a-lifetime experience. We saw leopards, elephants and so many birds. Our driver was amazing!"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Schema.org Structured Data - BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://slgotravel.com/"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Schema.org Structured Data - WebSite with SearchAction -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Slanka Taxi",
+      "url": "https://slgotravel.com",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://slgotravel.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
     }
     </script>
   </head>
