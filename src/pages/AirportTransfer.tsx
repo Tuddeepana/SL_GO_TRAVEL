@@ -7,9 +7,9 @@ import { useEffect } from "react";
 
 const AirportTransfer = () => {
   useEffect(() => {
-    document.title = "Airport Transfer Sri Lanka | Colombo Airport Pickup | SL Go Travel";
+    document.title = "Airport Transfer Sri Lanka | Colombo Airport Pickup | Slanka Taxi";
     const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) metaDesc.setAttribute("content", "Book reliable airport transfers from Katunayake Airport. Safe, comfortable, and affordable private pickups across Sri Lanka with SL Go Travel.");
+    if (metaDesc) metaDesc.setAttribute("content", "Book reliable airport transfers from Katunayake Airport. Safe, comfortable, and affordable private pickups across Sri Lanka with Slanka Taxi.");
   }, []);
 
   return (

@@ -8,7 +8,7 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <a href="#home" className="inline-block mb-3">
-              <img src="/logo_s.png" alt="SL Go Travel" className="h-14 md:h-17 w-auto" />
+              <img src="/logo_s.png" alt="Slanka Taxi" className="h-14 md:h-17 w-auto" />
             </a>
             <p className="text-primary-foreground/70 text-sm leading-relaxed">
               Your trusted travel partner in Sri Lanka. Safe, reliable, and affordable transport & safari services.
@@ -65,7 +65,7 @@ const Footer = () => {
         <div className="border-t border-primary-foreground/20 mt-10 pt-6 text-center">
           <p className="text-sm text-primary-foreground/60 flex items-center justify-center gap-2">
             <span>© {new Date().getFullYear()} SlankaTaxi </span>
-            {/*<img src="/logo_s.png" alt="SL Go Travel" className="inline h-6 w-auto" />*/}
+            {/*<img src="/logo_s.png" alt="Slanka Taxi" className="inline h-6 w-auto" />*/}
             <span>All rights reserved.</span>
           </p>
         </div>

@@ -50,18 +50,18 @@ const BookingCard = () => {
 
   const handleBookRide = () => {
     if (!pickup || !drop || !date || !time || !vehicle) return;
-    const msg = `Hello SL Go Travel,\nI would like to book a ride.\n\nPickup: ${pickup}\nDrop: ${drop}\nDate: ${format(date, "PPP")}\nTime: ${time} ${ampm}\nVehicle: ${vehicle}\nEstimated Price: LKR ${estimatedPrice?.total?.toLocaleString() ?? "N/A"}`;
+    const msg = `Hello Slanka Taxi,\nI would like to book a ride.\n\nPickup: ${pickup}\nDrop: ${drop}\nDate: ${format(date, "PPP")}\nTime: ${time} ${ampm}\nVehicle: ${vehicle}\nEstimated Price: LKR ${estimatedPrice?.total?.toLocaleString() ?? "N/A"}`;
     sendWhatsApp(msg);
   };
 
   const handleTripPlan = () => {
     if (!tripPlan) return;
-    sendWhatsApp(`Hello SL Go Travel,\nI would like to plan a trip.\n\n${tripPlan}`);
+    sendWhatsApp(`Hello Slanka Taxi,\nI would like to plan a trip.\n\n${tripPlan}`);
   };
 
   const handleCustomRequest = () => {
     if (!customRequest) return;
-    sendWhatsApp(`Hello SL Go Travel,\nCustom Request:\n\n${customRequest}`);
+    sendWhatsApp(`Hello Slanka Taxi,\nCustom Request:\n\n${customRequest}`);
   };
 
   /*
@@ -69,7 +69,7 @@ const BookingCard = () => {
     if (!uberPickup || !uberDrop || !uberVehicle) return;
     const p = locations.find((l) => l.name === uberPickup);
     const d = locations.find((l) => l.name === uberDrop);
-    const msg = `Hello SL Go Travel,\nI would like to book a ride now.\n\nPickup: ${uberPickup} (${p?.lat}, ${p?.lng})\nDrop: ${uberDrop} (${d?.lat}, ${d?.lng})\nVehicle: ${uberVehicle}\nEstimated Price: LKR ${uberPrice?.total?.toLocaleString() ?? "N/A"}`;
+    const msg = `Hello Slanka Taxi,\nI would like to book a ride now.\n\nPickup: ${uberPickup} (${p?.lat}, ${p?.lng})\nDrop: ${uberDrop} (${d?.lat}, ${d?.lng})\nVehicle: ${uberVehicle}\nEstimated Price: LKR ${uberPrice?.total?.toLocaleString() ?? "N/A"}`;
     sendWhatsApp(msg);
   };
   */

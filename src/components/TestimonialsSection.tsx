@@ -4,7 +4,7 @@ const testimonials = [
   {
     name: "Emma Wilson",
     country: "United Kingdom",
-    text: "Fantastic safari experience! The driver was very knowledgeable about wildlife and the jeep was comfortable. Highly recommend SL Go Travel!",
+    text: "Fantastic safari experience! The driver was very knowledgeable about wildlife and the jeep was comfortable. Highly recommend Slanka Taxi!",
     rating: 5,
   },
   {

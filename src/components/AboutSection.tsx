@@ -13,14 +13,14 @@ const AboutSection = () => {
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <h2 className="section-title">
-            About <span className="text-primary">SL Go Travel</span>
+            About <span className="text-primary">Slanka Taxi</span>
           </h2>
           <div className="w-20 h-1 tropical-gradient rounded-full mx-auto mb-6" />
         </div>
 
         <div className="max-w-3xl mx-auto text-center mb-16">
           <p className="text-muted-foreground leading-relaxed text-lg">
-            SL Go Travel is a trusted startup transport and tourism service in Sri Lanka offering safe, reliable, and affordable travel solutions. Our experienced drivers ensure comfortable airport transfers, private tours, hotel transfers, and Yala safari experiences. We focus on customer safety, punctuality, and unforgettable travel memories across Sri Lanka.
+            Slanka Taxi is a trusted startup transport and tourism service in Sri Lanka offering safe, reliable, and affordable travel solutions. Our experienced drivers ensure comfortable airport transfers, private tours, hotel transfers, and Yala safari experiences. We focus on customer safety, punctuality, and unforgettable travel memories across Sri Lanka.
           </p>
         </div>
 

@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { ChevronRight } from "lucide-react";
-import serviceAirport from "@/assets/service-airport.jpg";
-import serviceDaytour from "@/assets/service-daytour.jpg";
-import serviceLongtour from "@/assets/service-longtour.jpg";
-import serviceHotel from "@/assets/service-hotel.jpg";
+import serviceAirport from "@/assets/service-airport.webp";
+import serviceDaytour from "@/assets/service-daytour.webp";
+import serviceLongtour from "@/assets/service-longtour.webp";
+import serviceHotel from "@/assets/service-hotel.webp";
 
 const services = [
   {

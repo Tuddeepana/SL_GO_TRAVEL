@@ -23,7 +23,7 @@ const ContactSection = () => {
     e.preventDefault();
     if (!name || !message) return;
     const fullWhatsApp = `${countryCode} ${whatsapp}`.trim();
-    const msg = `Hello SL Go Travel,\n\nName: ${name}\nEmail: ${email}\nWhatsApp: ${fullWhatsApp}\nService: ${service}\nMessage: ${message}`;
+    const msg = `Hello Slanka Taxi,\n\nName: ${name}\nEmail: ${email}\nWhatsApp: ${fullWhatsApp}\nService: ${service}\nMessage: ${message}`;
     sendWhatsApp(msg);
   };
 
@@ -75,7 +75,7 @@ const ContactSection = () => {
             {/* Google Maps */}
             <div className="rounded-2xl overflow-hidden shadow-lg h-64">
               <iframe
-                title="SL Go Travel Location"
+                title="Slanka Taxi Location"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.5!2d81.2882!3d6.2834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTcnMDAuMiJOIDgxwrAxNycxNy41IkU!5e0!3m2!1sen!2slk!4v1700000000000!5m2!1sen!2slk"
                 width="100%"
                 height="100%"
