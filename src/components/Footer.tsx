@@ -8,9 +8,9 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <a href="#home" className="inline-block mb-3">
+            <Link to="/" className="inline-block mb-3">
               <img src="/logo_s.png" alt="Slanka Taxi - Sri Lanka Tourist Transport" className="h-14 md:h-17 w-auto" />
-            </a>
+            </Link>
             <p className="text-primary-foreground/70 text-sm leading-relaxed mb-4">
               Sri Lanka's trusted taxi and safari service. Safe, reliable transport for tourists since 2020.
             </p>
@@ -49,10 +49,10 @@ const Footer = () => {
             <ul className="space-y-2 text-sm text-primary-foreground/70">
               <li><Link to="/yala-safari" className="hover:text-secondary transition-colors">Yala Safari Booking</Link></li>
               <li><Link to="/yala-taxi" className="hover:text-secondary transition-colors">Yala Taxi Service</Link></li>
-              <li><a href="#services" className="hover:text-secondary transition-colors">Day Tours</a></li>
-              <li><a href="#services" className="hover:text-secondary transition-colors">Multi-Day Tours</a></li>
-              <li><a href="#fleet" className="hover:text-secondary transition-colors">Our Fleet</a></li>
-              <li><a href="#about" className="hover:text-secondary transition-colors">About Us</a></li>
+              <li><Link to="/#services" className="hover:text-secondary transition-colors">Day Tours</Link></li>
+              <li><Link to="/#services" className="hover:text-secondary transition-colors">Multi-Day Tours</Link></li>
+              <li><Link to="/#fleet" className="hover:text-secondary transition-colors">Our Fleet</Link></li>
+              <li><Link to="/#about" className="hover:text-secondary transition-colors">About Us</Link></li>
             </ul>
           </div>
 
@@ -60,11 +60,11 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4 text-secondary">Quick Links</h4>
             <ul className="space-y-2 text-sm text-primary-foreground/70">
-              <li><a href="#home" className="hover:text-secondary transition-colors">Home</a></li>
-              <li><a href="#services" className="hover:text-secondary transition-colors">Services</a></li>
-              <li><a href="#testimonials" className="hover:text-secondary transition-colors">Reviews</a></li>
-              <li><a href="#faq" className="hover:text-secondary transition-colors">FAQ</a></li>
-              <li><a href="#contact" className="hover:text-secondary transition-colors">Contact</a></li>
+              <li><Link to="/" className="hover:text-secondary transition-colors">Home</Link></li>
+              <li><Link to="/#services" className="hover:text-secondary transition-colors">Services</Link></li>
+              <li><Link to="/#testimonials" className="hover:text-secondary transition-colors">Reviews</Link></li>
+              <li><Link to="/#faq" className="hover:text-secondary transition-colors">FAQ</Link></li>
+              <li><Link to="/#contact" className="hover:text-secondary transition-colors">Contact</Link></li>
             </ul>
           </div>
 

@@ -4,16 +4,17 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
-import Index from "./pages/Index";
-import YalaTaxi from "./pages/YalaTaxi";
-import YalaSafari from "./pages/YalaSafari";
-import AirportTransfer from "./pages/AirportTransfer";
-import ColomboTaxi from "./pages/ColomboTaxi";
-import EllaTaxi from "./pages/EllaTaxi";
-import KandyTaxi from "./pages/KandyTaxi";
-import GalleTaxi from "./pages/GalleTaxi";
-import TissamaharamaTaxi from "./pages/TissamaharamaTaxi";
-import NotFound from "./pages/NotFound";
+import ScrollToTopOnRouteChange from "./components/ScrollToTopOnRouteChange";
+import Index from "./pages/Index.tsx";
+import YalaTaxi from "./pages/YalaTaxi.tsx";
+import YalaSafari from "./pages/YalaSafari.tsx";
+import AirportTransfer from "./pages/AirportTransfer.tsx";
+import ColomboTaxi from "./pages/ColomboTaxi.tsx";
+import EllaTaxi from "./pages/EllaTaxi.tsx";
+import KandyTaxi from "./pages/KandyTaxi.tsx";
+import GalleTaxi from "./pages/GalleTaxi.tsx";
+import TissamaharamaTaxi from "./pages/TissamaharamaTaxi.tsx";
+import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
 
@@ -24,6 +25,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <ScrollToTopOnRouteChange />
           <Routes>
             {/* Main Pages */}
             <Route path="/" element={<Index />} />
